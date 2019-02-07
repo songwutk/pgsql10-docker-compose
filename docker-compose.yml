@@ -1,3 +1,6 @@
+version : '2'
+services :
+
 pgsql:
   container_name: pgsql
   image: postgres:10.6-alpine
@@ -11,13 +14,10 @@ pgsql:
     - ./data:/var/lib/postgresql
   restart: always
   
-
 pgadmin:
   container_name: pgadmin
   image: fenglc/pgadmin4:python3.6-alpine
 #   user : pgadmin4@pgadmin.org, passwd : admin
-
-
   ports:
     - "5050:5050"
 
